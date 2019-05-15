@@ -36,7 +36,7 @@ function CharacterStats (Attributes){
 }
 CharacterStats.prototype= Object.create (GameObject.prototype)
 
-CharacterStats.prototype.takeDamage= function (){
+CharacterStats.prototype.takeDamage = function (){
   return `${this.name} took damage.`;
 }
 /*
@@ -55,6 +55,9 @@ CharacterStats.prototype.takeDamage= function (){
    CharacterStats.call(this, Attributes);
  }
  Humanoid.protype = Object.create(CharacterStats.prototype);
+ Humanoid.prototype.greet=function(){
+  return `${this.name} offers a greeting in ${this.language}`;
+ }
  /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
   * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.

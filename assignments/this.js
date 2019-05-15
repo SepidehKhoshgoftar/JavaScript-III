@@ -22,7 +22,7 @@ var sayname = function(){
 // Principle 2
 
 // code example for Implicit Binding
-var sayNameMixine= function(obj){
+var sayName= function(obj){
     obj.sayName = function(){
         console.log(this.name);
     };
@@ -35,8 +35,8 @@ var you ={
     name: 'Sara',
     age: 21
 };
-sayNameMixine(Joy);
-sayNameMixine(you);
+sayName(Joy);
+sayName(you);
 
 Joy.sayName();
 you.sayName();
